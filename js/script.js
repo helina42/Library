@@ -20,3 +20,21 @@ function addBook(books) {
   book.appendChild(delBook);
   bookLi.appendChild(book);
 }
+const addBtn = document.querySelector('.addBook');
+addBtn.addEventListener('click', () => {
+  const book = getBook();
+  bookLib.push(book);
+  localStorage.setItem('bookLib ', JSON.stringify(bookLib));
+  addBook(book);
+});
+
+window.onload = () => {
+  bookLib = JSON.parse(localStorage.getItem('bookLib' || '[]'));
+  if (bookLib === null) {
+    bookLib = [];
+    return;
+  }
+  bookLib.forEach((book) => {
+    addBook(book);
+  });
+};
