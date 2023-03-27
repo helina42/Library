@@ -1,42 +1,22 @@
-document.querySelector('.form').addEventListener('click', (event) => {
-  event.preventDefault();
-});
-const bookLib = [];
-let book = {};
-const addBookButton = document.querySelector('.addBook');
-function addBook() {
-  const title = document.querySelector('.title').value;
-  const author = document.querySelector('.author').value;
-  book = {
-    title,
-    author,
-  };
-  // bookLib.push(book);
-  console.log('inner', book);
+let bookLib = [];
+const book = {};
+function getBook() {
+  book.title = document.querySelector('.title').value;
+  book.author = document.querySelector('.author').value;
+  return book;
 }
-book = addBook();
-console.log('outer: ', book);
 
-const inputTitle = document.getElementById('.title');
-const inputAuthor = document.getElementById('.author');
-// function storeBook() {
-//   const book = {
-//     title: inputTitle.value,
-//     author: inputAuthor.value,
-//   };
-//   window.localStorage.setItem('book', JSON.stringify(book));
-// }
-// form.addEventListener('input', addBook);
-// const savedData = JSON.parse(localStorage.getItem('book'));
-
-// window.addEventListener('load', () => {
-//   if (savedData) {
-//     inputTitle.value = savedData.title;
-//     inputAuthor.value = savedData.author;
-//   }
-//   return true;
-// });
-
-// // document.querySelector('.form').addEventListener('click', (event) => {
-// //   event.preventDefault();
-// // });
+function addBook(books) {
+  const bookLi = document.querySelector('#book-list');
+  const book = document.createElement('LI');
+  book.setAttribute('style', 'id:list');
+  book.innerHTML = `<h3> ${books.title} </h3> <p>${books.author} </p>`;
+  book.style.listStyle = 'none';
+  const delBook = document.createElement('button');
+  delBook.innerHTML = 'Delete';
+  delBook.addEventListener('click', () => {
+    book.innerHTML = '';
+  });
+  book.appendChild(delBook);
+  bookLi.appendChild(book);
+}
