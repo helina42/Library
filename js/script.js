@@ -1,5 +1,5 @@
 class Book {
-  id = 0;
+  id = '';
 
   title = '';
 
@@ -20,19 +20,15 @@ class bookLib {
   }
 
   addBook(book) {
-    this.bookList.push(book);
-    localStorage.setItem('bookLib', JSON.stringify(this.bookList));
-    UI(book);
+    if(book.title.trim()!==''&& book.author.trim()!==''){
+      this.bookList = this.bookList.concat(book);
+      localStorage.setItem('bookLib', JSON.stringify(this.bookList));
+      UI(book);
+    }
   }
 
   removeBook(book) {
-    const newBooks = [];
-    for (let i = 0; i < this.bookList.length; i++) {
-      if (this.bookList[i].id !== book.id) {
-        newBooks.push(this.bookList[i]);
-      }
-    }
-    this.bookList = newBooks;
+    this.bookList = this.bookList.filter(filt =>filt.id !== book.id);
     localStorage.setItem('bookLib', JSON.stringify(this.bookList));
   }
 }
@@ -40,7 +36,7 @@ class bookLib {
 function getBook() {
   const title = document.querySelector('.title');
   const author = document.querySelector('.author');
-  const book = new Book(myBookLib.bookList.length + 1, title.value, author.value);
+  const book = new Book(myBookLib.bookList.length, title.value, author.value);
   title.value = '';
   author.value = '';
   return book;
