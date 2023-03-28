@@ -45,6 +45,23 @@ function getBook() {
   author.value = '';
   return book;
 }
+function UI(books) {
+  const bookLi = document.querySelector('#book-list');
+  const book = document.createElement('LI');
+  book.setAttribute('style', 'id:list');
+  book.id = `${books.id}`;
+  book.innerHTML = `<h3> "${books.title}" by ${books.author} </h3>`;
+  book.style.listStyle = 'none';
+  const delBook = document.createElement('button');
+  delBook.innerHTML = 'Delete';
+  delBook.addEventListener('click', () => {
+    myBookLib.removeBook(books);
+    bookLi.removeChild(book);
+  });
+  book.appendChild(delBook);
+  bookLi.appendChild(book);
+}
+
 const myBookLib = new bookLib([]);
 
 const addBtn = document.querySelector('.addBook');
