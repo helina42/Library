@@ -1,67 +1,91 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-    text-align: center;
-    height: f
+  text-align: center;
+  height: f;
 }
 
 ul {
-    border: 3px solid black;
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    padding: 0;
-    margin: 0 20%;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0 20%;
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button {
-   height: fit-content;
+  height: fit-content;
 }
 
 h2 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-.addBook{
-    margin-top: 8px;
-    margin-bottom: 13px;
-    margin-left: 29.13vw;
-    border: 3px solid black;
-
+.addBook {
+    display: flex;
+    align-self: flex-end;
+  margin-top: 8px;
+  margin-bottom: 13px;
+  border: 3px solid black;
 }
 
 .form-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 13%;
 }
 
 hr {
-    width: 40%;
-    height: 3px;
-    background-color: black;
+  width: 40%;
+  height: 3px;
+  background-color: black;
 }
 
 input {
-    font-size: 20px;
-    font-weight: 500;
-    border: 3px solid black;
+  font-size: 20px;
+  font-weight: 500;
+  border: 3px solid black;
 }
 
+input::placeholder {
+  color: black;
+  width: auto;
+}
+
+body > div.form-container > form > h2 {
+  padding: 20px;
+}
+
+li:nth-child(even) {
+  background-color: #fff;
+}
+
+li:nth-child(odd) {
+  background-color: #bdc0c7;
+}
+
+li > h3 {
+  margin: 5px;
+}
+li > button {
+  margin: 5px;
+}
