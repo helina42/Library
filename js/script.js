@@ -1,3 +1,4 @@
+
 class Book {
   id = '';
 
@@ -47,6 +48,7 @@ function UI(books) {
   book.setAttribute('style', 'id:list');
   book.id = `${books.id}`;
   book.innerHTML = `<h3> "${books.title}" by ${books.author} </h3>`;
+
   book.style.listStyle = 'none';
   const delBook = document.createElement('button');
   delBook.innerHTML = 'Delete';
