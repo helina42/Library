@@ -5,7 +5,6 @@ body {
 
 .header {
   text-align: center;
-  height: f;
 }
 
 ul {
@@ -24,7 +23,7 @@ li {
 }
 
 button {
-  height: fit-content;
+  height: auto;
 }
 
 h2 {
@@ -37,9 +36,10 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+
 .addBook {
-    display: flex;
-    align-self: flex-end;
+  display: flex;
+  align-self: flex-end;
   margin-top: 8px;
   margin-bottom: 13px;
   border: 3px solid black;
@@ -86,6 +86,7 @@ li:nth-child(odd) {
 li > h3 {
   margin: 5px;
 }
+
 li > button {
   margin: 5px;
 }

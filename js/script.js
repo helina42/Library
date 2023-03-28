@@ -20,7 +20,7 @@ class bookLib {
   }
 
   addBook(book) {
-    if(book.title.trim()!==''&& book.author.trim()!==''){
+    if (book.title.trim() !== '' && book.author.trim() !== '') {
       this.bookList = this.bookList.concat(book);
       localStorage.setItem('bookLib', JSON.stringify(this.bookList));
       UI(book);
@@ -28,7 +28,7 @@ class bookLib {
   }
 
   removeBook(book) {
-    this.bookList = this.bookList.filter(filt =>filt.id !== book.id);
+    this.bookList = this.bookList.filter((filt) => filt.id !== book.id);
     localStorage.setItem('bookLib', JSON.stringify(this.bookList));
   }
 }
