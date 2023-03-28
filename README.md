@@ -80,8 +80,7 @@
 - **[There are input fields for author name and book title]**
 - **[Both Li and delete button added dynamically through JavaScript]**
 - **[there is a delete option for removing a book]**
-
-
+- **[refactor to use JavaScript classes]**
 
 
 
@@ -224,7 +223,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
  
-- **[We will need to adhere to the layout presented in the wireframe and also but you will adjust  the application's styling]**
 - **[Build a complete website with working navigation. When a user clicks on a link in the navigation bar, the content in the main section of the website changes]**
 - **[Through styling we will try to replicate the design provided to us by Microverse]**
 
