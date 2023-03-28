@@ -1,3 +1,4 @@
+
 class Book {
   id = 0;
 
@@ -45,6 +46,7 @@ function getBook() {
   author.value = '';
   return book;
 }
+
 function UI(books) {
   const bookLi = document.querySelector('#book-list');
   const book = document.createElement('LI');
