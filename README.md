@@ -77,8 +77,8 @@
 - **[No linter errors]**
 - **[Correct (GitHub flow)]**
 - **[Proper documented work]**
-- **[There are input fields for author name and book title]**
-- **[Both Li and delete button added dynamically through JavaScript]**
+- **[There are input fields for author name and book title.]**
+- **[Both Li and delete button added dynamically through JavaScript.]**
 - **[there is a delete option for removing a book]**
 - **[refactor to use JavaScript classes]**
 
