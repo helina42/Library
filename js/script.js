@@ -73,3 +73,41 @@ window.onload = () => {
     UI(book);
   });
 };
+
+function navigation(section) {
+  const List = document.querySelector('#show-book');
+  const Form = document.querySelector('.form');
+  const Contact = document.querySelector('.contact');
+  const heading = document.querySelector('.header');
+
+  switch (section) {
+    case 'show-book':
+      List.style.display = 'block';
+      Form.style.display = 'none';
+      Contact.style.display = 'none';
+      heading.innerHTML = 'All Awesome Books';
+      break;
+
+    case 'form':
+      List.style.display = 'none';
+      Form.style.display = 'block';
+      Contact.style.display = 'none';
+      heading.innerHTML = 'Add a New Book';
+      break;
+
+    case 'contact':
+      List.style.display = 'none';
+      Form.style.display = 'none';
+      Contact.style.display = 'block';
+      heading.innerHTML = 'Contact Information';
+      break;
+
+    default: break;
+  }
+}
+
+function setDate() {
+  const date = document.getElementById('date');
+  const { DateTime } = luxon;
+  date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');
+}
