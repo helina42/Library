@@ -106,12 +106,5 @@ function navigation(section) {
   }
 }
 
-// function setDate() {
-//   const date = document.getElementById('date');
-//   const { DateTime } = luxon;
-//   date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');
-// }
-
 const dateContainer = document.querySelector('.date');
 dateContainer.innerHTML = new Date().toString().slice(0, 34);
-// bookObj.loadBooks();
